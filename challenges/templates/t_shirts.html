@@ -1,0 +1,55 @@
+{%extends 'base.html'%}
+{%block content%} 
+<link rel="stylesheet" href="static/styles/index.css">
+<h1> T-shirts (him/hers) </h1>
+<div>
+    <nav class= 'navbar navbar-expand-sm nab=vbar-light bg-light'>
+        <div class="navbar-nav">
+            <a class = "nav-item nav-link" href= "{% url 'index' %}" >Home</a>
+            <a class = "nav-item nav-link" href= "{% url 'shirts' %}" >Shirts</a>
+            <a class = "nav-item nav-link" href= "{% url 't_shirts'%}" >T-Shirts</a>
+            <a class = "nav-item nav-link" href= "{% url 'sweaters'%}" >Sweaters</a>
+            <a class = "nav-item nav-link" href= "{% url 'blazers'%}" >Blazers</a>
+            <a class = "nav-item nav-link" href= "{% url 'upload'%}" >Sell Item</a>
+            <a class = "nav-item nav-link" href= "{% url 'checkout'%}" >Buy/Checkout</a> 
+        </nav></div>
+
+  
+<style>    
+    img {
+    width: 15%;
+    height: auto;
+   }
+    </style>
+  {% comment %} <body>  
+<div>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/1700944/2022/3/2/093bc645-d461-4128-94a1-0692803944141646215571321-HRX-by-Hrithik-Roshan-Men-Yellow-Printed-Cotton-Pure-Cotton--1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2275365/2019/9/10/4f24f563-c764-4f27-9fc5-9ad3dcf167621568108715062-Roadster-Men-White-Solid-Round-Neck-T-shirt-1641568108713591-1.jpg'/>
+<img src ='https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/5/6/8cd552e0-3335-423a-9d15-7ef0a52c30a81620304671157-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/1997244/2022/5/27/bf0e755f-1940-4a1d-8fb2-85b327deea981653647065669-Roadster-Men-Grey-Melange-All-Over-Printed-T-shirt-331653647-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11487342/2020/6/17/e3958d19-7c4b-49ce-8a5c-e82ed6e6ef321592396334332-Nautica-Men-Tshirts-721592396332125-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/7231695/2019/2/7/48b78201-b421-439e-afb6-b637d3cacbfc1549546519557-HRX-by-Hrithik-Roshan-Men-Tshirts-8551549546517531-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/12/1aab2a18-6774-4f83-b292-fe301755a3351576102551329-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2314374/2018/5/2/11525240942451-HRX-by-Hrithik-Roshan-Men-Black-Self-Design-Polo-Collar-T-shirt-1561525240942331-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/14311828/2021/6/9/df9b41d0-6e91-41e5-af29-c147215534091623221774887Mens100CottonSlimBlackTShirtTshirtsLouisPhilippeMenTshirtsLo1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2142812/2019/3/1/009137d1-0f88-4694-9ad4-7afb31039d4e1551439168225-Roadster-Women-Black-Printed-Round-Neck-Drop-Shoulder-T-shir-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17168626/2022/4/8/2f7553fa-acfd-4c1d-a77a-0121d50d0f271649419528494-ADIDAS-Women-Tshirts-1691649419528015-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13930788/2021/8/6/38d6c0e3-cda3-4059-a673-2cdb0bafae181628241011946-DILLINGER-Women-Tshirts-8941628241011571-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10565642/2022/4/7/a3020ba6-9ee7-4fa0-bafc-35629d1413dc1649314214970-HRX-by-Hrithik-Roshan-Women-Jet-Black-Rapid-Dry-Running-T-sh-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15044444/2021/9/27/b3d74392-10f6-4e7a-84f6-ba31064caa821632731131187-ETC-Women-Lounge-Tshirts-3291632731130548-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15399606/2021/9/17/94e2db6b-a26a-422f-8da4-d05263bd7ade1631873987258-Difference-of-Opinion-Women-Tshirts-9531631873986834-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17762386/2022/5/18/22012dd9-0b2c-4d07-a285-be6bbf6b6fdc1652850002502-Nautica-Women-Tshirts-3691652850001993-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/14013764/2022/2/24/423ed222-01f4-4d08-b1f8-a046a066a43b1645695982296-Nautica-Women-White-Solid-Pure-Cotton-V-Neck-Pure-Cotton-T-s-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/1753418/2017/6/13/11497332680176-Roadster-Women-Tshirts-7081497332679930-1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17597956/2022/4/8/9c4edb4a-03c1-4e58-a73b-7598853cac431649407789596ASWNSWTEEEARTHDAY1.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/14013856/2022/2/24/4809654a-a418-43bc-bf44-84c26e5912e91645693828548-Nautica-Women-Blue-V-Neck-Pure-Cotton-T-shirt-48816456938273-1.jpg'/>
+</div></body> {% endcomment %}
+
+
+<body>
+    {%for x in my_data%} 
+    <img src = '{{x.link}}'/>
+    {%endfor%}
+    </body>
+
+{%endblock%}

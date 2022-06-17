@@ -1,0 +1,78 @@
+{%extends 'base.html'%}
+{%block content%}
+<link rel="stylesheet" href="static/styles/index.css">
+<h1> Shirts (him/hers) </h1>
+<div>
+<nav class= 'navbar navbar-expand-sm nab=vbar-light bg-light'>
+    <div class="navbar-nav">
+        <a class = "nav-item nav-link" href= "{% url 'index' %}" >Home</a>
+        <a class = "nav-item nav-link" href= "{% url 'shirts' %}" >Shirts</a>
+        <a class = "nav-item nav-link" href= "{% url 't_shirts'%}" >T-Shirts</a>
+        <a class = "nav-item nav-link" href= "{% url 'sweaters'%}" >Sweaters</a>
+        <a class = "nav-item nav-link" href= "{% url 'blazers'%}" >Blazers</a>
+        <a class = "nav-item nav-link" href= "{% url 'upload'%}" >Sell Item</a>
+        <a class = "nav-item nav-link" href= "{% url 'checkout'%}" >Buy/Checkout</a> 
+    </nav>
+
+
+<div>
+    <style>    
+        img {
+        width: 15%;
+        height: auto;
+       }
+    </style>
+
+{% comment %}     
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2038071/2019/4/9/ace5c891-0717-485c-8080-9c37c5c759821554799993054-Roadster-Men-Black--White-Slim-Fit-Solid-Casual-Shirt-322155-1.jpg' /> 
+<span>Black/white solid slim fit shirt </span> 
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18522580/2022/5/30/44a3519b-c40b-4623-a2f3-2b4d3bca312a16539320814352-packcottongrandadshirts1.jpg' /> 
+<span>Grandad shirt</span>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/4319215/2018/4/13/11523613738225--HIGHLANDER-Men-Pack-Of-2-Solid-Shirts-4391523613737930-1.jpg' /> 
+<span class="caption">Solid shirts 2pack </span>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2188023/2017/10/18/11508315132609-Hancock-Men-Shirts-9361508315132383-1.jpg' /> 
+<span class="caption">Hancock shirt </span>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9342461/2019/5/21/6b1e14fa-5097-4cbc-b50e-e5909312819f1558422906291-JAINISH-Men-Pack-of-Two-Shirts-1971558422904933-1.jpg' /> 
+<span class="caption"> JAINISM shirts 2pack </span>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/4320097/2018/3/21/11521622005578-HIGHLANDER-Men-Shirts-551521622005361-1.jpg' /> 
+<span class="caption">HIGHLANDER shirt </span>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17691496/2022/3/30/8bf5c13b-0b8e-4182-84ce-ec1a8aee893d1648638972046V-MartBoysBlackStandardPrintedCasualShirt1.jpg' /> 
+<span class="caption"> Printed casual shirt </span>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2188022/2017/10/18/11508315123129-Hancock-Men-Shirts-2921508315122855-1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9342501/2019/5/21/f4e2890e-30fd-4ead-bc95-8d686fbab6471558423063473-JAINISH-Men-Pack-of-Two-Shirts-8231558423062392-1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9342517/2019/5/21/fa929821-52c5-483c-b5c2-9b4c8c6f42ad1558420788259-JAINISH-Men-Pack-of-Two-Shirts-61558420786517-1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9342399/2019/5/21/8e0d6229-d89c-40e7-83f1-260f8432e5c11558425017825-JAINISH-Men-Pack-of-Two-Shirts-831558425016176-1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15198496/2021/8/19/126b021c-9fe8-4924-9814-9bc06f8600811629368510776Oversizedcottonshirt1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17810666/2022/4/8/20b71615-8b2b-49df-ada7-840bac58e02f1649394337779Oversizedresortshirt1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11549510/2021/12/24/2a3d1c2e-4ced-4b96-81f4-0b8702be083d1640325901512-SASSAFRAS-Black-Dobby-Sheer-Boxy-Shirt-8921640325900918-1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11711658/2020/10/27/657e7e24-2b16-4265-b020-334535c83f301603797756302-her-by-invictus-Women-Shirts-1881603797754710-1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/2418013/2021/1/27/089225e3-14cf-4322-b300-6e805b1cc06b1611738678086-Roadster-Women-Navy-Blue--Blue-Regular-Fit-Checked-Casual-Sh-1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/9410705/2022/4/21/b2160acb-e1d8-4d94-ab15-2265c0c0411b1650544449178herbyinvictusWomenMaroonWhitePrintedCasualShirt1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/9/18/a3942a53-ce72-4e7a-93a7-1deafbca64da1600378824116-1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17013522/2022/2/14/415b260f-44a8-410a-99d5-dba337bc92a01644838491829TopsMarksSpencerWomenTopsMarksSpencerWomenTopsMarksSpencerWo1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13339656/2021/8/9/878025f0-58d6-4626-a4c1-d9e9375164e11628504852049-Roadster-Women-Shirts-4771628504851445-1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18282288/2022/5/16/6c4a8b8b-0430-4cb6-8b4f-49e9a70b43b21652692219325GANTWomenPinkComfortCasualShirt1.jpg' /> 
+
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/7430908/2019/11/28/100f4a19-6998-4fbd-9df2-325ef45bb1c21574923655953-HERENOW-Women-White-Regular-Fit-Solid-Casual-Shirt-108157492-1.jpg' /> 
+
+</div> {% endcomment %}
+
+<body>
+{%for x in my_data%} 
+<img src = '{{x.link}}'/>
+{%endfor%}
+</body>
+{%endblock%}

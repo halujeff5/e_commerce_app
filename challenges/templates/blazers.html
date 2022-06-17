@@ -1,0 +1,46 @@
+{%extends 'base.html'%}
+{%block content%}
+<link rel="stylesheet" href="static/styles/index.css">
+<h1> Blazers (him/hers) </h1>
+<div>
+<nav class= 'navbar navbar-expand-sm nab=vbar-light bg-light'>
+    <div class="navbar-nav">
+        <a class = "nav-item nav-link" href= "{% url 'index' %}" >Home</a>
+        <a class = "nav-item nav-link" href= "{% url 'shirts' %}" >Shirts</a>
+        <a class = "nav-item nav-link" href= "{% url 't_shirts'%}" >T-Shirts</a>
+        <a class = "nav-item nav-link" href= "{% url 'sweaters'%}" >Sweaters</a>
+        <a class = "nav-item nav-link" href= "{% url 'blazers'%}" >Blazers</a>
+        <a class = "nav-item nav-link" href= "{% url 'upload'%}" >Sell Item</a>
+        <a class = "nav-item nav-link" href= "{% url 'checkout'%}" >Buy/Checkout</a>
+    </nav>
+<div>
+    <style>    
+        img {
+        width: 15%;
+        height: auto;
+       
+      }</style>
+
+     
+{% comment %} </body>
+
+    <img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16681018/2022/1/4/61efd002-e737-4c7e-90a6-3316eb1521711641285349117Blazers1.jpg' /> 
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16883146/2022/2/8/295ee8c0-bcf4-4ce2-b12a-e99ef9fbeb8f1644320505645-House-of-Pataudi-Men-Blazers-7891644320504567-6.jpg'/>
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17842454/2022/4/11/f9141783-6b3b-4aed-a6e5-4186ab88f1e41649653439122Linen-blendjacket1.jpg' />
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15904438/2021/11/19/819c6cba-d6ef-455a-aa27-31f4a4fe07281637301621982-Peter-England-Elite-Men-Blazers-6011637301621337-1.jpg' />
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/2/28/c5bec7fa-7a82-4617-ab5d-baf8448ceef41582842640157-1.jpg' />
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17609396/2022/3/31/879ce0cb-39c1-4f28-aed1-f4252e6a772b1648718109009-Louis-Philippe-Men-Blazers-8961648718108331-1.jpg' />
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18355616/2022/5/20/cc0c6e4b-1437-4797-bd36-e7764717887a1653043000323LouisPhilippeGreyBlazer1.jpg' />
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/9/17/ac9906f8-70a7-4442-acf4-f7da045c73fd1600298368665-1.jpg'     />
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16842564/2022/1/15/29edf540-f8c9-4868-8032-77966e83044f1642241446236AllenSollyNavyBlazer1.jpg' />
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/3/8/526312ae-5cc3-4eaf-bff5-89faad9112601615208009346-1.jpg' />
+<img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16892572/2022/4/13/17e42758-c43c-4398-9d94-885e8456bdb41649843146078MANGOWomenRedPulloverBlazersMANGOWomenShortsMANGOWomenDresse1.jpg'/>
+   
+</body> {% endcomment %}
+
+<body>
+{%for x in my_data%} 
+<img src = '{{x.link}}'/>
+{%endfor%}
+</body>
+{%endblock%}

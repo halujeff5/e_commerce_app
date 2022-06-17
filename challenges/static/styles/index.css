@@ -1,0 +1,41 @@
+body
+{background-color: coral;}
+
+p
+{font-family:Georgia, 'Times New Roman', Times, serif;
+
+font-size: 30px;
+}
+div
+{font-family:Georgia, 'Times New Roman', Times, serif;}
+
+h1
+{font-family:Georgia, 'Times New Roman', Times, serif;}
+
+div 
+{
+    background-color: white;
+    
+}  
+
+img {
+    width: 40px;
+    height: 60px;
+    background-color: grey; 
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;}
+    
+
+
+div.each_item {
+    width:50px;
+    margin-right: 20px;
+    display: inline-block;
+
+}
+
+div.all_items{
+display: inline-block;
+
+}

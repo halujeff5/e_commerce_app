@@ -1,0 +1,54 @@
+{%extends 'base.html'%}
+{%block content%}
+<link rel="stylesheet" href="static/styles/index.css">
+<h1> Sweaters (him/hers) </h1>
+<div>
+<nav class= 'navbar navbar-expand-sm nab=vbar-light bg-light'>
+    <div class="navbar-nav">
+        <a class = "nav-item nav-link" href= "{% url 'index' %}" >Home</a>
+        <a class = "nav-item nav-link" href= "{% url 'shirts' %}" >Shirts</a>
+        <a class = "nav-item nav-link" href= "{% url 't_shirts'%}" >T-Shirts</a>
+        <a class = "nav-item nav-link" href= "{% url 'sweaters'%}" >Sweaters</a>
+        <a class = "nav-item nav-link" href= "{% url 'blazers'%}" >Blazers</a>
+        <a class = "nav-item nav-link" href= "{% url 'upload'%}" >Sell Item</a>
+        <a class = "nav-item nav-link" href= "{% url 'checkout'%}" >Buy/Checkout</a>
+    </nav>
+    <div>
+        <style>    
+            img {
+            width: 15%;
+            height: auto;
+           }
+        </style>
+        {% comment %} <div class="item">
+        <img src=""/>
+  <img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17969962/2022/5/5/d06a7900-e1a0-4d98-8ec4-df637f25507d1651748658660TshirtsMANGOWomenTshirtsMANGOWomenTshirtsMANGOWomenTshirtsMA1.jpg'/>
+  <span class="caption">Mango women's shirt </span>
+  <img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/14071816/2021/12/11/4ce68aa8-8d32-4ef6-8cca-e1c37da6a5f11639224359897-DressBerry-Women-Olive-Green--Black-Colourblocked-Pullover-8-1.jpg'/> 
+  <span class="caption">Green black pullover </span>
+  <img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15765584/2021/12/10/9b66c953-0078-4469-a43a-d5cad4c930001639118643937-GANT-Men-Blue-Printed-Pullover-Sweater-1601639118643486-1.jpg'/> 
+  <span class="caption">Printed Men's pullover sweater </span>
+  <img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/6998137/2018/11/22/3b6eede4-f3aa-4c78-9eb2-40be1cbc92711542863611267-Roadster-Men-Olive-and-Navy-Blue-Colorblocked-Sweater--6521542863610837-1.jpg'/>
+  <span class="caption"> Olive black sweater</span>
+  <img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/6/4abb963e-6ac7-4eff-abbf-460fabe3c7041601942590353-1.jpg'/>
+  <span class="caption">Women's designer sweater</span>
+  <img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17695408/2022/3/30/47dcbaac-475e-4c65-a273-bffb6743e1be1648649742280FOREVER21WomenPurpleSweaters1.jpg'/>
+  <span class="caption">Happy face design sweater </span>
+  <img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15977438/2021/11/23/e85ffffe-9981-45b4-b0a6-31d5660766be1637668946721DressesMANGOWomenJeansMANGOWomenSkirtsMANGOWomenSkirtsMANGOW1.jpg'/>
+  <span class="caption">Mango striped sweater </span>
+  <img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/4/30/f6ee3cfa-6f06-467b-b451-c78240b2bece1619774184280-1.jpg'/>
+  <span class="caption">Men's knit sweater</span>
+  <img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/18207902/2022/5/10/eb6e48f5-e31f-40b4-b52d-20f8510843f11652147656371Sportssweatervest1.jpg'/>
+  <span class="caption">Sleeveless gold sweater</span>
+  <img src = 'https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/12422698/2020/11/24/eb755d5c-7cce-4b99-9cf8-c5f126b4a79d1606218770974-WROGN-Men-Sweaters-2781606218769811-1.jpg'/>
+  <span class="caption">Designer printed Men's sweater </span>
+  <img src = {{user_image}} alt= "User Image">
+  <span class="caption">Cotton polyester blend sweater </span>
+</ul> {% endcomment %}
+
+<body>
+    {%for x in my_data%} 
+    <img src = '{{x.link}}'/>
+    {%endfor%}
+    </body>
+{%endblock%}
